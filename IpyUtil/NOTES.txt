@@ -1,0 +1,15 @@
+このフォルダ配下のソースコードに関してはMIT Licenseを適用します。
+コードが呼び出すDLLのライセンスについては、個別に確認してください。
+
+このフォルダ配下のプログラムは、以下のプロジェクトの成果物を利用して
+います。
+
+.NET Framework: http://www.microsoft.com/japan/msdn/netframework/
+NUnit:          http://www.nunit.org/
+IronPython:     http://www.codeplex.com/IronPython
+
+
+---------------------------------------------------------------------
+                     Copyright 2008 Dot-Station
+                   Licensed under the MIT License
+---------------------------------------------------------------------

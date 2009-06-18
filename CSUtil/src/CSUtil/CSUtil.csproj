@@ -1,0 +1,110 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5385976-C31F-42DF-B1DB-54EA0F98FDC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSUtil</RootNamespace>
+    <AssemblyName>CSUtil</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CSUtil.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CSUtil.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayUtil.cs" />
+    <Compile Include="BCDConverter.cs" />
+    <Compile Include="BigEndianBitConverter.cs" />
+    <Compile Include="BoolCollection.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderArrayIndex.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderBinaryOperator.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderField.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderMethodInvoke.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderMethodReference.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderPrimitive.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderProperty.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\BuilderThis.cs" />
+    <Compile Include="CodeDom\ExpressionBuilder\ET.cs" />
+    <Compile Include="CodeDom\JSEval.cs" />
+    <Compile Include="Collections\Generic\SyncQueue.cs" />
+    <Compile Include="Collections\Generic\SyncWaitQueue.cs" />
+    <Compile Include="Configuration\AppConfigUtil.cs" />
+    <Compile Include="Configuration\IniFile.cs" />
+    <Compile Include="CsvUtil.cs" />
+    <Compile Include="DateTimeUtil.cs" />
+    <Compile Include="DisposableObject.cs" />
+    <Compile Include="EnumUtil.cs" />
+    <Compile Include="IO\BigEndianWriter.cs" />
+    <Compile Include="IO\FileUpdateChecker.cs" />
+    <Compile Include="IO\MailSlot.cs" />
+    <Compile Include="IO\MailSlotBase.cs" />
+    <Compile Include="IO\MailSlotReader.cs" />
+    <Compile Include="IO\Pushd.cs" />
+    <Compile Include="Management\QueryUtil.cs" />
+    <Compile Include="Management\Shutdown.cs" />
+    <Compile Include="MarshalByDisposableObject.cs" />
+    <Compile Include="Random.cs" />
+    <Compile Include="Reflection\AssemblyUtil.cs" />
+    <Compile Include="Runtime\SerializeUtil.cs" />
+    <Compile Include="Text\FastDiff.cs" />
+    <Compile Include="Text\LevenshteinDistance.cs" />
+    <Compile Include="Text\Ngram.cs" />
+    <Compile Include="Threading\Para.cs" />
+    <Compile Include="Threading\WaitValue.cs" />
+    <Compile Include="Web\OAuthBase.cs" />
+    <Compile Include="ObjectUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReentryLock.cs" />
+    <Compile Include="Security\Cryptography\CRC16.cs" />
+    <Compile Include="Security\Cryptography\CRC32.cs" />
+    <Compile Include="Threading\ClockSyncTimer.cs" />
+    <Compile Include="Threading\EventQueueThread.cs" />
+    <Compile Include="Threading\WaitedThreadStartRunner.cs" />
+    <Compile Include="Tuple.cs" />
+    <Compile Include="ValueUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
