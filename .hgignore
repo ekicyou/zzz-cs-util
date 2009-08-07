@@ -1,0 +1,5 @@
+glob:*\bin\Debug\*
+glob:*\bin\Release\*
+glob:*\obj\*
+glob:*.suo
+glob:*.user
