@@ -22,7 +22,10 @@ namespace CSUtil.Reflection
         public static string GetAssemblyPath(Assembly assembly)
         {
             Uri binURI = new Uri(assembly.CodeBase);
-            return Path.GetFullPath(binURI.AbsolutePath);
+            string encPath = binURI.AbsolutePath;
+            string path = Uri.UnescapeDataString(encPath);
+            string fullPath = Path.GetFullPath(path);
+            return fullPath;
         }
 
         /// <summary>
@@ -78,7 +81,7 @@ namespace CSUtil.Reflection
             {
                 try {
                     Assembly assembly = Assembly.LoadFile(path);
-                    //			if(assembly->FullName != name) return nullptr;
+                    //      if(assembly->FullName != name) return nullptr;
                     return assembly;
                 }
                 catch (Exception) {
@@ -114,6 +117,6 @@ namespace CSUtil.Reflection
             }
         }
 
-    
+
     }
 }
