@@ -18,8 +18,11 @@ namespace CSUtil.IO
         /// <returns>FileInfoの列挙子</returns>
         public static IEnumerable<FileInfo> EnFileInfo(string baseDir)
         {
-            return from path in Directory.GetFiles(baseDir, "*.*", SearchOption.AllDirectories)
-                   select new FileInfo(path);
+            foreach (string path in Directory.GetFiles(
+                baseDir, "*.*", SearchOption.AllDirectories)) {
+
+                yield return new FileInfo(path);
+            }
         }
     }
 }

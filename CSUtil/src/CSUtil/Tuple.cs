@@ -4,179 +4,179 @@ using System.Text;
 
 namespace CSUtil
 {
-  /// <summary>
-  /// ２値のタプルをあらわします。
-  /// </summary>
-  /// <typeparam name="TA"></typeparam>
-  /// <typeparam name="TB"></typeparam>
-  public struct Tuple2<TA, TB> : IEquatable<Tuple2<TA, TB>>
-  {
     /// <summary>
-    /// 要素A。
+    /// ２値のタプルをあらわします。
     /// </summary>
-    public readonly TA A;
-
-    /// <summary>
-    /// 要素B。
-    /// </summary>
-    public readonly TB B;
-
-    /// <summary>
-    /// 要素X(=A)
-    /// </summary>
-    public TA X { get { return A; } }
-
-    /// <summary>
-    /// 要素Y(=B)
-    /// </summary>
-    public TB Y { get { return B; } }
-
-    /// <summary>
-    /// コンストラクタ。
-    /// </summary>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    public Tuple2(TA a, TB b)
+    /// <typeparam name="TA"></typeparam>
+    /// <typeparam name="TB"></typeparam>
+    public struct Tuple2<TA, TB> : IEquatable<Tuple2<TA, TB>>
     {
-      A = a;
-      B = b;
+        /// <summary>
+        /// 要素A。
+        /// </summary>
+        public readonly TA A;
+
+        /// <summary>
+        /// 要素B。
+        /// </summary>
+        public readonly TB B;
+
+        /// <summary>
+        /// 要素X(=A)
+        /// </summary>
+        public TA X { get { return A; } }
+
+        /// <summary>
+        /// 要素Y(=B)
+        /// </summary>
+        public TB Y { get { return B; } }
+
+        /// <summary>
+        /// コンストラクタ。
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        public Tuple2(TA a, TB b)
+        {
+            A = a;
+            B = b;
+        }
+
+        /// <summary>
+        /// 同値ならtrueを返します。
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Tuple2<TA, TB> other)
+        {
+            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
+            return EqualityComparer<TB>.Default.Equals(B, other.B);
+        }
     }
 
+
     /// <summary>
-    /// 同値ならtrueを返します。
+    /// ３値のタプルをあらわします。
     /// </summary>
-    /// <param name="other"></param>
-    /// <returns></returns>
-    public bool Equals(Tuple2<TA, TB> other)
+    /// <typeparam name="TA"></typeparam>
+    /// <typeparam name="TB"></typeparam>
+    /// <typeparam name="TC"></typeparam>
+    public struct Tuple3<TA, TB, TC> : IEquatable<Tuple3<TA, TB, TC>>
     {
-      if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-      return EqualityComparer<TB>.Default.Equals(B, other.B);
-    }
-  }
+        /// <summary>
+        /// 要素A。
+        /// </summary>
+        public readonly TA A;
+
+        /// <summary>
+        /// 要素B。
+        /// </summary>
+        public readonly TB B;
+
+        /// <summary>
+        /// 要素C。
+        /// </summary>
+        public readonly TC C;
+
+        /// <summary>
+        /// 要素X(=A)
+        /// </summary>
+        public TA X { get { return A; } }
+
+        /// <summary>
+        /// 要素Y(=B)
+        /// </summary>
+        public TB Y { get { return B; } }
+
+        /// <summary>
+        /// 要素Z(=C)
+        /// </summary>
+        public TC Z { get { return C; } }
 
 
-  /// <summary>
-  /// ３値のタプルをあらわします。
-  /// </summary>
-  /// <typeparam name="TA"></typeparam>
-  /// <typeparam name="TB"></typeparam>
-  /// <typeparam name="TC"></typeparam>
-  public struct Tuple3<TA, TB, TC> : IEquatable<Tuple3<TA, TB, TC>>
-  {
-    /// <summary>
-    /// 要素A。
-    /// </summary>
-    public readonly TA A;
+        /// <summary>
+        /// コンストラクタ。
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        public Tuple3(TA a, TB b, TC c)
+        {
+            A = a;
+            B = b;
+            C = c;
+        }
 
-    /// <summary>
-    /// 要素B。
-    /// </summary>
-    public readonly TB B;
-
-    /// <summary>
-    /// 要素C。
-    /// </summary>
-    public readonly TC C;
-
-    /// <summary>
-    /// 要素X(=A)
-    /// </summary>
-    public TA X { get { return A; } }
-
-    /// <summary>
-    /// 要素Y(=B)
-    /// </summary>
-    public TB Y { get { return B; } }
-
-    /// <summary>
-    /// 要素Z(=C)
-    /// </summary>
-    public TC Z { get { return C; } }
-
-
-    /// <summary>
-    /// コンストラクタ。
-    /// </summary>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    /// <param name="c"></param>
-    public Tuple3(TA a, TB b, TC c)
-    {
-      A = a;
-      B = b;
-      C = c;
-    }
-
-    /// <summary>
-    /// 同値ならtrueを返します。
-    /// </summary>
-    /// <param name="other"></param>
-    /// <returns></returns>
-    public bool Equals(Tuple3<TA, TB, TC> other)
-    {
-      if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-      if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
-      return EqualityComparer<TC>.Default.Equals(C, other.C);
-    }
-  }
-
-
-  /// <summary>
-  /// ４値のタプルをあらわします。
-  /// </summary>
-  /// <typeparam name="TA"></typeparam>
-  /// <typeparam name="TB"></typeparam>
-  /// <typeparam name="TC"></typeparam>
-  /// <typeparam name="TD"></typeparam>
-  public struct Tuple4<TA, TB, TC, TD> : IEquatable<Tuple4<TA, TB, TC, TD>>
-  {
-    /// <summary>
-    /// 要素A。
-    /// </summary>
-    public readonly TA A;
-
-    /// <summary>
-    /// 要素B。
-    /// </summary>
-    public readonly TB B;
-
-    /// <summary>
-    /// 要素C。
-    /// </summary>
-    public readonly TC C;
-
-    /// <summary>
-    /// 要素D。
-    /// </summary>
-    public readonly TD D;
-
-    /// <summary>
-    /// コンストラクタ。
-    /// </summary>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    /// <param name="c"></param>
-    /// <param name="d"></param>
-    public Tuple4(TA a, TB b, TC c, TD d)
-    {
-      A = a;
-      B = b;
-      C = c;
-      D = d;
+        /// <summary>
+        /// 同値ならtrueを返します。
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Tuple3<TA, TB, TC> other)
+        {
+            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
+            if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
+            return EqualityComparer<TC>.Default.Equals(C, other.C);
+        }
     }
 
+
     /// <summary>
-    /// 同値ならtrueを返します。
+    /// ４値のタプルをあらわします。
     /// </summary>
-    /// <param name="other"></param>
-    /// <returns></returns>
-    public bool Equals(Tuple4<TA, TB, TC, TD> other)
+    /// <typeparam name="TA"></typeparam>
+    /// <typeparam name="TB"></typeparam>
+    /// <typeparam name="TC"></typeparam>
+    /// <typeparam name="TD"></typeparam>
+    public struct Tuple4<TA, TB, TC, TD> : IEquatable<Tuple4<TA, TB, TC, TD>>
     {
-      if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-      if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
-      if (!EqualityComparer<TC>.Default.Equals(C, other.C)) return false;
-      return EqualityComparer<TD>.Default.Equals(D, other.D);
+        /// <summary>
+        /// 要素A。
+        /// </summary>
+        public readonly TA A;
+
+        /// <summary>
+        /// 要素B。
+        /// </summary>
+        public readonly TB B;
+
+        /// <summary>
+        /// 要素C。
+        /// </summary>
+        public readonly TC C;
+
+        /// <summary>
+        /// 要素D。
+        /// </summary>
+        public readonly TD D;
+
+        /// <summary>
+        /// コンストラクタ。
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        public Tuple4(TA a, TB b, TC c, TD d)
+        {
+            A = a;
+            B = b;
+            C = c;
+            D = d;
+        }
+
+        /// <summary>
+        /// 同値ならtrueを返します。
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Tuple4<TA, TB, TC, TD> other)
+        {
+            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
+            if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
+            if (!EqualityComparer<TC>.Default.Equals(C, other.C)) return false;
+            return EqualityComparer<TD>.Default.Equals(D, other.D);
+        }
     }
-  }
 
 }

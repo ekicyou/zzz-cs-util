@@ -5,19 +5,19 @@ using CSUtil.CodeDom;
 
 namespace CSUtil.Test
 {
-  using NUnit.Framework;
+    using NUnit.Framework;
 
-  [TestFixture]
-  public class EvalTest
-  {
-    [Test]
-    public void Test1()
+    [TestFixture]
+    public class EvalTest
     {
-      Assert.AreEqual(7, JSEval.Eval("1+2*3"));
-      Assert.AreEqual(4, JSEval.Eval("var a=14;var b=10; a-b;"));
-      Assert.AreEqual(1, JSEval.EvalTarget(this, "target.TestValue -99"));
-    }
+        [Test]
+        public void Test1()
+        {
+            Assert.AreEqual(7, JSEval.Eval("1+2*3"));
+            Assert.AreEqual(4, JSEval.Eval("var a=14;var b=10; a-b;"));
+            Assert.AreEqual(1, JSEval.EvalTarget(this, "target.TestValue -99"));
+        }
 
-    public int TestValue { get { return 100; } }
-  }
+        public int TestValue { get { return 100; } }
+    }
 }

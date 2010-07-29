@@ -5,20 +5,20 @@ using System.CodeDom;
 
 namespace CSUtil.CodeDom.ExpressionBuilder
 {
-  internal class BuilderProperty : ET
-  {
-    private readonly ET Target;
-    private readonly string Name;
-
-    public BuilderProperty(ET target, string name)
+    internal class BuilderProperty : ET
     {
-      this.Target = target;
-      this.Name = name;
-    }
+        private readonly ET Target;
+        private readonly string Name;
 
-    public override CodeExpression Expression
-    {
-      get { return new CodePropertyReferenceExpression(Target.Expression, Name); }
+        public BuilderProperty(ET target, string name)
+        {
+            this.Target = target;
+            this.Name = name;
+        }
+
+        public override CodeExpression Expression
+        {
+            get { return new CodePropertyReferenceExpression(Target.Expression, Name); }
+        }
     }
-  }
 }

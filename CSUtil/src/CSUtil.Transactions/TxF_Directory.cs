@@ -5,23 +5,23 @@ using System.IO;
 
 namespace CSUtil.Transactions
 {
-  public partial class TxF
-  {
-    /// <summary>
-    /// トランザクションディレクトリ操作を行います。
-    /// </summary>
-    public class TxDirectory
+    public partial class TxF
     {
-      private readonly SafeTransactionHandle TxHandle;
+        /// <summary>
+        /// トランザクションディレクトリ操作を行います。
+        /// </summary>
+        public class TxDirectory
+        {
+            private readonly SafeTransactionHandle TxHandle;
 
-      internal TxDirectory(SafeTransactionHandle txHandle)
-      {
-        TxHandle = txHandle;
-      }
+            internal TxDirectory(SafeTransactionHandle txHandle)
+            {
+                TxHandle = txHandle;
+            }
 
 
 
 
+        }
     }
-  }
 }

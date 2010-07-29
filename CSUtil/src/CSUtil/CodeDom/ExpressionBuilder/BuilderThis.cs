@@ -5,8 +5,8 @@ using System.CodeDom;
 
 namespace CSUtil.CodeDom.ExpressionBuilder
 {
-  internal class BuilderThis : ET
-  {
-    public override CodeExpression Expression { get { return new CodeThisReferenceExpression(); } }
-  }
+    internal class BuilderThis : ET
+    {
+        public override CodeExpression Expression { get { return new CodeThisReferenceExpression(); } }
+    }
 }

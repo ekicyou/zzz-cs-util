@@ -5,22 +5,22 @@ using System.CodeDom;
 
 namespace CSUtil.CodeDom.ExpressionBuilder
 {
-  internal class BuilderBinaryOperator : ET
-  {
-    private readonly ET Left;
-    private readonly CodeBinaryOperatorType Operation;
-    private readonly ET Right;
-
-    public BuilderBinaryOperator(ET l, CodeBinaryOperatorType op, ET r)
+    internal class BuilderBinaryOperator : ET
     {
-      this.Left = l;
-      this.Operation = op;
-      this.Right = r;
-    }
+        private readonly ET Left;
+        private readonly CodeBinaryOperatorType Operation;
+        private readonly ET Right;
 
-    public override CodeExpression Expression
-    {
-      get { return new CodeBinaryOperatorExpression(Left.Expression, Operation, Right.Expression); }
+        public BuilderBinaryOperator(ET l, CodeBinaryOperatorType op, ET r)
+        {
+            this.Left = l;
+            this.Operation = op;
+            this.Right = r;
+        }
+
+        public override CodeExpression Expression
+        {
+            get { return new CodeBinaryOperatorExpression(Left.Expression, Operation, Right.Expression); }
+        }
     }
-  }
 }
