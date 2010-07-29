@@ -109,8 +109,5 @@ namespace CSUtil
         private static readonly int MIN_YEAR = DateTime.Now.Year - 30;
         private static readonly int MIN_YEAR_OFFSET = (MIN_YEAR / 100) * 100;
 
-
-
-
     }
 }

@@ -118,6 +118,5 @@ namespace CSUtil.Security.Cryptography
             crc = 0;
         }
 
-
     }
 }

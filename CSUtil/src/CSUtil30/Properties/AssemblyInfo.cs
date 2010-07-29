@@ -9,20 +9,16 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-// General Information about an assembly is controlled through the following 
+// General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CSUtil30")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("C#3.0/3.5用ユーティリティライブラリ")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSUtil30")]
-[assembly: AssemblyCopyright("Copyright @  2008")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+
 [assembly: ComVisible(false)]
 
-//In order to begin building localizable applications, set 
+//In order to begin building localizable applications, set
 //<UICulture>CultureYouAreCodingWith</UICulture> in your .csproj file
 //inside a <PropertyGroup>.  For example, if you are using US english
 //in your source files, set the <UICulture> to en-US.  Then uncomment
@@ -50,13 +46,13 @@ using System.Runtime.InteropServices;
     ResourceDictionaryLocation.SourceAssembly)]
 
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+// [CSUtil：共通情報]
+[assembly: AssemblyProduct("C# ユーティリティライブラリ MITライセンス")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("Copyright (C)  2007-2010")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// [CSUtil：AssemblyVersion]
+[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyFileVersion("1.3.0.0")]

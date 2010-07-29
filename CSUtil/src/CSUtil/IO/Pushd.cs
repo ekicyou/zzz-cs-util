@@ -17,12 +17,20 @@ namespace CSUtil.IO
         public readonly string OrgPath = null;
 
         /// <summary>
+        /// デフォルトコンストラクタ。
+        /// </summary>
+        public Pushd()
+        {
+            OrgPath = Directory.GetCurrentDirectory();
+        }
+
+        /// <summary>
         /// コンストラクタ。
         /// </summary>
         /// <param name="newPath"></param>
         public Pushd(string newPath)
+            :this()
         {
-            OrgPath = Directory.GetCurrentDirectory();
             Directory.SetCurrentDirectory(newPath);
         }
 

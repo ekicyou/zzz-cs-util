@@ -92,12 +92,20 @@ namespace CSUtil
         /// <param name="path">読み込むファイルのPath</param>
         /// <param name="length">１行に必要な列数</param>
         /// <param name="commentChar">コメントとみなす行頭文字</param>
+        /// <param name="endMark">終了と見なす文字列</param>
         /// <returns></returns>
-        public static IEnumerable<string[]> ReadCsv(string path, int length, char commentChar)
+        public static IEnumerable<string[]> ReadCsv(
+            string path, int length, char commentChar, string endMark)
         {
             int lineNo = 0;
             foreach (string[] rec in ReadCsv(path)) {
                 lineNo++;
+                if (rec.Length == 1
+                    && string.IsNullOrEmpty(endMark)
+                    && rec[0].TrimEnd() == endMark) {
+                    Debug.WriteLine(string.Format("終了マークを発見したので終了します。File={0}:mark=[{1}]", path, endMark));
+                    yield break;
+                }
                 if (rec.Length < length) {
                     Trace.TraceInformation("読み込めない行を読み飛ばしました。File={0}:{1}", path, lineNo);
                     continue;
@@ -109,6 +117,21 @@ namespace CSUtil
                 yield return rec;
             }
         }
+
+        /// <summary>
+        /// CSVファイルを読み込むジェネレータを返します。
+        /// コメント行、及び最低必要な列数に満たない行を飛ばします。
+        /// </summary>
+        /// <param name="path">読み込むファイルのPath</param>
+        /// <param name="length">１行に必要な列数</param>
+        /// <param name="commentChar">コメントとみなす行頭文字</param>
+        /// <returns></returns>
+        public static IEnumerable<string[]> ReadCsv(
+            string path, int length, char commentChar)
+        {
+            return ReadCsv(path, length, commentChar, null);
+        }
+
 
         /// <summary>
         /// CSVファイルをDataTableに読み込みます。
@@ -224,9 +247,6 @@ namespace CSUtil
             headers[0] = "#" + headers[0];
             return headers.ToArray();
         }
-
-
-
 
     }
 }

@@ -31,6 +31,12 @@ namespace CSUtil.Management
 
         private static void CallWmiShutdown(int flags)
         {
+            // 実行前にガベージコレクトを行っておく
+            GC.Collect();
+            System.Threading.Thread.CurrentThread.Join(0);
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+
             //ユーザー特権を有効にするための設定を作成
             ConnectionOptions co = new ConnectionOptions();
             co.Impersonation = ImpersonationLevel.Impersonate;

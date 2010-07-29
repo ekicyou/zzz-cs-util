@@ -117,6 +117,26 @@ namespace CSUtil.Reflection
             }
         }
 
+        /// <summary>
+        /// スタックを指定した階層を遡ってメソッド名を取得します。
+        /// </summary>
+        /// <param name="skipFrames">遡るカウント。０のとき呼び出したメソッド。</param>
+        /// <returns></returns>
+        public static string GetMethodName(int skipFrames)
+        {
+            StackFrame sf = new StackFrame(skipFrames + 1);
+            MethodBase m = sf.GetMethod();
+            return m.ReflectedType.Name + "::" + m.Name;
+        }
+
+        /// <summary>
+        /// 呼び出し元メソッドのメソッド名を取得します。
+        /// </summary>
+        /// <returns></returns>
+        public static string GetMethodName()
+        {
+            return GetMethodName(1);
+        }
 
     }
 }

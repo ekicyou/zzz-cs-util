@@ -9,7 +9,7 @@ namespace CSUtil
     /// </summary>
     /// <typeparam name="TA"></typeparam>
     /// <typeparam name="TB"></typeparam>
-    public struct Tuple2<TA, TB> : IEquatable<Tuple2<TA, TB>>
+    public struct Tuple2<TA, TB>
     {
         /// <summary>
         /// 要素A。
@@ -43,14 +43,12 @@ namespace CSUtil
         }
 
         /// <summary>
-        /// 同値ならtrueを返します。
+        /// 文字列表現を返します。
         /// </summary>
-        /// <param name="other"></param>
         /// <returns></returns>
-        public bool Equals(Tuple2<TA, TB> other)
+        public override string ToString()
         {
-            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-            return EqualityComparer<TB>.Default.Equals(B, other.B);
+            return string.Format("[{0},{1}]", A, B);
         }
     }
 
@@ -61,7 +59,7 @@ namespace CSUtil
     /// <typeparam name="TA"></typeparam>
     /// <typeparam name="TB"></typeparam>
     /// <typeparam name="TC"></typeparam>
-    public struct Tuple3<TA, TB, TC> : IEquatable<Tuple3<TA, TB, TC>>
+    public struct Tuple3<TA, TB, TC>
     {
         /// <summary>
         /// 要素A。
@@ -108,15 +106,12 @@ namespace CSUtil
         }
 
         /// <summary>
-        /// 同値ならtrueを返します。
+        /// 文字列表現を返します。
         /// </summary>
-        /// <param name="other"></param>
         /// <returns></returns>
-        public bool Equals(Tuple3<TA, TB, TC> other)
+        public override string ToString()
         {
-            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-            if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
-            return EqualityComparer<TC>.Default.Equals(C, other.C);
+            return string.Format("[{0},{1},{2}]", A, B, C);
         }
     }
 
@@ -128,7 +123,7 @@ namespace CSUtil
     /// <typeparam name="TB"></typeparam>
     /// <typeparam name="TC"></typeparam>
     /// <typeparam name="TD"></typeparam>
-    public struct Tuple4<TA, TB, TC, TD> : IEquatable<Tuple4<TA, TB, TC, TD>>
+    public struct Tuple4<TA, TB, TC, TD>
     {
         /// <summary>
         /// 要素A。
@@ -166,16 +161,12 @@ namespace CSUtil
         }
 
         /// <summary>
-        /// 同値ならtrueを返します。
+        /// 文字列表現を返します。
         /// </summary>
-        /// <param name="other"></param>
         /// <returns></returns>
-        public bool Equals(Tuple4<TA, TB, TC, TD> other)
+        public override string ToString()
         {
-            if (!EqualityComparer<TA>.Default.Equals(A, other.A)) return false;
-            if (!EqualityComparer<TB>.Default.Equals(B, other.B)) return false;
-            if (!EqualityComparer<TC>.Default.Equals(C, other.C)) return false;
-            return EqualityComparer<TD>.Default.Equals(D, other.D);
+            return string.Format("[{0},{1},{2},{3}]", A, B, C, D);
         }
     }
 
