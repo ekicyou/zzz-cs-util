@@ -27,7 +27,7 @@ namespace CSUtil.Test
         [Test]
         public void Test1()
         {
-            Random rand = new Random();
+            System.Random rand = new System.Random();
             TestValueClass target = new TestValueClass(rand.Next(int.MaxValue));
 
             string path1 = "SerializeTest_Test.gz";

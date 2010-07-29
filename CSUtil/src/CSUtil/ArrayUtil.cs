@@ -125,7 +125,7 @@ namespace CSUtil
         /// <returns></returns>
         public static T[] Shuffle(ref T[] array)
         {
-            Random rand = new Random();
+            System.Random rand = new System.Random();
             for (int i = 0; i < array.Length; i++) {
                 int dst = rand.Next(array.Length);
                 T swap = array[i];

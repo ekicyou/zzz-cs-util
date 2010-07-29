@@ -119,7 +119,7 @@ namespace CSUtil.Web
         protected const string RSASHA1SignatureType = "RSA-SHA1";
 
         /// <summary></summary>
-        protected Random random = new Random();
+        protected System.Random random = new System.Random();
 
         /// <summary></summary>
         protected string unreservedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
