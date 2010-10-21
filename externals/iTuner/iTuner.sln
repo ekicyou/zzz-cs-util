@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTuner", "iTuner\iTuner.csproj", "{70D7300A-C4C0-40BC-A9E5-6CEF0B768F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTunerTests", "iTunerTests\iTunerTests.csproj", "{F47F5A79-AEE4-433E-A3AC-D96D0E9626B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{302AAC69-739F-4654-9C11-B038336B77F3}"
+	ProjectSection(SolutionItems) = preProject
+		iTuner.vsmdi = iTuner.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "iTunerSetup", "iTunerSetup\iTunerSetup.vdproj", "{D8F37EB3-04EA-485A-B3C9-A1957B869EC8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs06.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = iTuner\\iTuner.csproj
+		SccProjectName1 = iTuner
+		SccLocalPath1 = iTuner
+		SccProjectUniqueName2 = iTunerSetup\\iTunerSetup.vdproj
+		SccProjectName2 = iTunerSetup
+		SccLocalPath2 = iTunerSetup
+		SccProjectUniqueName3 = iTunerTests\\iTunerTests.csproj
+		SccProjectName3 = iTunerTests
+		SccLocalPath3 = iTunerTests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70D7300A-C4C0-40BC-A9E5-6CEF0B768F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D7300A-C4C0-40BC-A9E5-6CEF0B768F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D7300A-C4C0-40BC-A9E5-6CEF0B768F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D7300A-C4C0-40BC-A9E5-6CEF0B768F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47F5A79-AEE4-433E-A3AC-D96D0E9626B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47F5A79-AEE4-433E-A3AC-D96D0E9626B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47F5A79-AEE4-433E-A3AC-D96D0E9626B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47F5A79-AEE4-433E-A3AC-D96D0E9626B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F37EB3-04EA-485A-B3C9-A1957B869EC8}.Debug|Any CPU.ActiveCfg = Debug
+		{D8F37EB3-04EA-485A-B3C9-A1957B869EC8}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

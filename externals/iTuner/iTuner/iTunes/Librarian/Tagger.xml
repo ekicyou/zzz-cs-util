@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<doc>
+
+  <!-- =============================================================================================
+  
+  Use genpuid:
+  genpuid e4230822bede81ef71cde723db743e27 -xml -rmd=2 "09-Little Martha.mp3"
+
+  -->
+
+  <genpuid songs="1" xmlns:mip="http://musicip.com/ns/mip-1.0#">
+    <track file="C:\Music\Bob Dylan\Essential Bob Dylan\Bob Dylan - It's All Right Ma.m4a"
+           puid="4f150cbe-2591-5928-c8ff-f584821f6c1d">
+      <title>It&apos;s Alright, Ma (I&apos;m Only Bleeding)</title>
+      <artist>
+        <name>Bob Dylan</name>
+      </artist>
+      <puid-list>
+        <puid id="4f150cbe-2591-5928-c8ff-f584821f6c1d"/>
+      </puid-list>
+      <mip:first-release-date>1965</mip:first-release-date>
+      <mip:genre-list>
+        <mip:genre>
+          <name>Rock</name>
+        </mip:genre>
+      </mip:genre-list>
+    </track>
+  </genpuid>
+  
+  
+  <!-- =============================================================================================
+  
+  MusicBrainz message packets
+
+  Use the PUID to retrieve the basic information:
+  http://musicbrainz.org/ws/1/track/?type=xml&puid=4f150cbe-2591-5928-c8ff-f584821f6c1d
+
+  -->
+
+  <metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#">
+    <track-list>
+      <track id="c40615ab-2a8d-4223-baa5-69dfedc0fa4e">
+        <title>It's Alright, Ma (I'm Only Bleeding)</title>
+        <duration>452093</duration>
+        <artist id="72c536dc-7137-4477-a521-567eeb840fa8">
+          <name>Bob Dylan</name>
+          <sort-name>Dylan, Bob</sort-name>
+        </artist>
+        <release-list>
+          <release id="67e7ab93-d5c1-442f-b8c0-dbfad52e2d34">
+            <title>Bringing It All Back Home</title>
+            <track-list offset="9"/>
+          </release>
+        </release-list>
+      </track>
+      <track id="25128209-e815-48dd-b6ba-e8407a3aff0f">
+        <title>It's Alright, Ma (I'm Only Bleeding)</title>
+        <duration>452093</duration>
+        <artist id="72c536dc-7137-4477-a521-567eeb840fa8">
+          <name>Bob Dylan</name>
+          <sort-name>Dylan, Bob</sort-name>
+        </artist>
+        <release-list>
+          <release id="ca754c1d-8254-4516-84b6-cb91559196e7">
+            <title>Subterranean Homesick Blues</title>
+            <track-list offset="9"/>
+          </release>
+        </release-list>
+      </track>
+    </track-list>
+  </metadata>
+
+
+  <!-- =============================================================================================
+  Extract the track id, release id, and artist id...
+
+  Track URL:
+  http://musicbrainz.org/ws/1/track/c40615ab-2a8d-4223-baa5-69dfedc0fa4e/?type=xml&inc=artist+releases
+
+  -->
+
+  <metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#">
+    <track id="c40615ab-2a8d-4223-baa5-69dfedc0fa4e">
+      <title>It's Alright, Ma (I'm Only Bleeding)</title>
+      <duration>452093</duration>
+      <artist id="72c536dc-7137-4477-a521-567eeb840fa8" type="Person">
+        <name>Bob Dylan</name>
+        <sort-name>Dylan, Bob</sort-name>
+        <life-span begin="1941-05-24" />
+      </artist>
+      <release-list>
+        <release id="67e7ab93-d5c1-442f-b8c0-dbfad52e2d34" type="Album Official">
+          <title>Bringing It All Back Home</title>
+          <text-representation language="ENG" script="Latn" />
+          <track-list offset="9" />
+        </release>
+      </release-list>
+    </track>
+  </metadata>
+
+
+  <!-- =============================================================================================
+
+  Release URL:
+  http://musicbrainz.org/ws/1/release/67e7ab93-d5c1-442f-b8c0-dbfad52e2d34/?type=xml&inc=counts+tracks+tags
+
+  -->
+  
+  <metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#" xmlns:ext="http://musicbrainz.org/ns/ext-1.0#">
+    <release id="67e7ab93-d5c1-442f-b8c0-dbfad52e2d34" type="Album Official" >
+      <title>Bringing It All Back Home</title>
+      <text-representation language="ENG" script="Latn"/>
+      <asin>B0000024SD</asin>
+      <release-event-list count="21"/>
+      <disc-list count="6"/>
+      <tag-list>
+        <tag count="4">folk rock</tag>
+        <tag count="3">folk</tag>
+        <tag count="2">acoustic</tag>
+        <tag count="2">folk-rock</tag>
+        <tag count="2">rock</tag>
+        <tag count="1">should be public domain</tag>
+      </tag-list>
+      <track-list>
+        <track id="a789abbf-fefe-4a7d-9d45-3efbfd389c88">
+          <title>Subterranean Homesick Blues</title>
+          <duration>144760</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">covered by 4</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="e9e148d8-299d-4ca5-b788-6cea8d15c9ca">
+          <title>She Belongs to Me</title>
+          <duration>169706</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="9a80acb2-67cb-4638-b82d-f5e42ea018ec">
+          <title>Maggie's Farm</title>
+          <duration>237626</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="22c6dfe8-64fd-4a05-9657-a4e15f4fd3e3">
+          <title>Love Minus Zero/No Limit</title>
+          <duration>174106</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="dda27130-f777-4615-ae20-f4d06a2d2cdc">
+          <title>Outlaw Blues</title>
+          <duration>187266</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="81b4e688-3d48-4154-9fb4-94876a6c2aa3">
+          <title>On the Road Again</title>
+          <duration>158426</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="216f6434-f0ce-4c62-9152-48f3ff8aa23a">
+          <title>Bob Dylan's 115th Dream</title>
+          <duration>392840</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="81ee2fd6-58a3-41de-b299-fe96dae9fde3">
+          <title>Mr. Tambourine Man</title>
+          <duration>333533</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="21a6db8a-680b-4615-803b-cea038cb96fe">
+          <title>Gates of Eden</title>
+          <duration>343000</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="c40615ab-2a8d-4223-baa5-69dfedc0fa4e">
+          <title>It's Alright, Ma (I'm Only Bleeding)</title>
+          <duration>452093</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+        <track id="b2a33fa4-323b-484f-b748-764553116506">
+          <title>It's All Over Now, Baby Blue</title>
+          <duration>253640</duration>
+          <tag-list>
+            <tag count="2">folk</tag>
+            <tag count="2">folk-rock</tag>
+            <tag count="1">acoustic</tag>
+            <tag count="1">folk rock</tag>
+            <tag count="1">rock</tag>
+          </tag-list>
+        </track>
+      </track-list>
+    </release>
+  </metadata>
+
+
+  <!-- =============================================================================================
+
+  Artist URL:
+  http://musicbrainz.org/ws/1/artist/72c536dc-7137-4477-a521-567eeb840fa8/?type=xml&inc=url-rels
+
+  -->
+
+  <metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#">
+    <artist id="72c536dc-7137-4477-a521-567eeb840fa8" type="Person">
+      <name>Bob Dylan</name>
+      <sort-name>Dylan, Bob</sort-name>
+      <life-span begin="1941-05-24"/>
+      <relation-list target-type="Url">
+        <relation type="Youtube" target="http://www.youtube.com/bobdylan" begin="" end=""/>
+        <relation type="BBCMusicPage" target="http://www.bbc.co.uk/music/artists/72c536dc-7137-4477-a521-567eeb840fa8" begin="" end=""/>
+        <relation type="IMDb" target="http://www.imdb.com/name/nm0001168/" begin="" end=""/>
+        <relation type="Wikipedia" target="http://en.wikipedia.org/wiki/Bob_Dylan" begin="" end=""/>
+        <relation type="Discogs" target="http://www.discogs.com/artist/Bob+Dylan" begin="" end=""/>
+        <relation type="Musicmoz" target="http://musicmoz.org/Bands_and_Artists/D/Dylan,_Bob/" begin="" end=""/>
+        <relation type="OfficialHomepage" target="http://www.bobdylan.com/" begin="" end=""/>
+        <relation type="Discography" target="http://www.searchingforagem.com/" begin="" end=""/>
+        <relation type="Discography" target="http://cds.jrd.org.uk/list/titles.bob.shtml" begin="" end=""/>
+        <relation type="Discography" target="http://www.boblinks.com/" begin="" end=""/>
+        <relation type="Discography" target="http://www.bobsboots.com/" begin="" end=""/>
+        <relation type="OnlineCommunity" target="http://twitter.com/bobdylan" begin="" end=""/>
+        <relation type="OnlineCommunity" target="http://www.facebook.com/bobdylan" begin="" end=""/>
+        <relation type="Myspace" target="http://www.myspace.com/bobdylan" begin="" end=""/>
+      </relation-list>
+    </artist>
+  </metadata>
+
+</doc>
